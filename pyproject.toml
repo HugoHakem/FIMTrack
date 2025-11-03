@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "FIMTrack"
+version = "0.1.0"
+description = "Tracking program for FIM imaging"
+readme = "README.md"
+authors = [
+    { name = "Hugo Hakem", email = "hugo.hakem@berkeley.edu" }
+]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-arm64", "win-64"]
+
+[tool.pixi.pypi-dependencies]
+project = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+# whatever task
+
+
+[tool.pixi.environments]
+default = { solve-group = "default" }
+dev = { features = [], solve-group = "default" }
+
+

@@ -373,3 +373,7 @@ _Pvt_Extensions
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+# pixi environments
+.pixi
+*.egg-info
